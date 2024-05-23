@@ -1,0 +1,96 @@
+--select *
+--from
+--Staff
+--where position LIKE "%middle%"
+--and
+--age > 20
+
+--select *
+--from Staff
+--where
+--firstname LIKE "a%" AND has_child LIKE "N"
+
+--select *
+--from
+--Staff
+--where id In (4,12,19)
+
+--select *
+--from
+--Staff
+--where position LIKE ("%middle%" OR position LIKE "%senior%")
+--OR
+--firstname LIKE "Anna"
+
+-- Найти список работников, у которых средний уровень должности(middle) и им больше 20 лет
+-- Найти список работников, у которых имя начинается с буквы А и у них нет детей
+-- Найти сотрудников с id 4, 12, 19
+-- Найти список работников с именем Анна, у которых уровень должности либо средний(middle), либо старший(senior)
+
+--select *
+--from
+--Staff
+--where username LIKE "_____"
+
+
+---- Найти работников которым меньше 20 или больше 35
+--select *
+--from Staff
+--where age Not BETWEEN 20 and 35
+
+-- Вывести только имя и фамилию работников, у которых есть дети.
+--select
+--firstname,
+--lastname
+--from Staff
+--where
+--has_child = "Y"
+
+-- Вывести имя, должность и возраст тех сотрудников, которым больше 18 и меньше 30
+
+--select
+--firstname,
+--position,
+--age
+--from
+--Staff
+--where
+--age Between 19 and 29
+
+-- Найти ошибку в коде
+--select *
+--from Staff
+--where username in ('billt1', 'ann', 'lalala');
+
+ --Найти ошибку в коде
+--select firstname, lastname
+--from Staff
+--where age between 10 and 30;
+
+-- Найти ошибку в коде
+--select firstname, lastname
+--from Staff
+--where age not between 30 and 10;
+
+-- Найти ошибку в коде
+--select *
+--from staff
+--where username like '%_';
+
+--select *
+--from Staff
+--mit 2
+
+-- Найти первых трех сотрудников, чьи имена начинаются на A.
+--select *
+--from Staff
+--where firstname Like "%a"
+--limit 3
+
+-- Найти сотрудников, чьи фамилии заканчиваются на N. Вывести только фамилии трех сотрудников пропуская первых двух.
+
+select
+lastname
+from Staff
+where lastname Like "%N"
+limit 2,3
